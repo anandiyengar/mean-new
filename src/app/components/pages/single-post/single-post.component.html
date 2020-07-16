@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2" id="singlePost">
+            <div class="card">
+                <img class="card-img-top" src="{{picUrl}}/post/photo/{{postContent._id}}" class="postImg" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{postContent.title}}</h5>
+                    <p class="card-text">{{postContent.description}}</p>
+                </div>
+                <div class="card-footer">
+                    <div class="float-left author">
+                        Posted-{{postContent.createdAt | date:"dd-m-yyyy"}}
+                    </div>
+                    <div class="float-right author">
+                        Author-{{postContent.author}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

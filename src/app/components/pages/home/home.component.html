@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let post of allPosts" >
+          <a routerLink="/post/{{post._id}}">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    {{post.title}}
+                </div>
+                <div class="card-body">
+                    <img src="{{picUrl}}{{post._id}}" class="postImg" />
+                </div>
+                <div class="card-footer  bg-info text-white">
+                    <div class="float-left author">
+                        Posted-{{post.createdAt | date}}
+                    </div>
+                    <div class="float-right author">
+                        Author-{{post.author}}
+                    </div>
+                </div>
+            </div>
+               </a>
+
+              
+        </div>
+        <div class="col-md-12 text-center" *ngIf="count == 0">
+            <div class="text-center">
+                <img class="card-img-top" style="width:60%" src="./../../../../assets/img/nopost.png" alt="">
+            </div>
+        </div>
+       
+    </div>
+</div>

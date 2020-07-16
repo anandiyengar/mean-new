@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4" *ngFor="let post of allPosts" >
+          
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    {{post.title}}
+                <span style="cursor: pointer;margin-left:10px" routerLink="/edit-post/{{post._id}}" class="float-right"><fa-icon [icon]="faEdit"></fa-icon></span>
+                <span style="cursor: pointer;" (click)="delPost(post._id)" class="float-right"><fa-icon [icon]="faTrash"></fa-icon></span>
+                </div>
+                <div class="card-body"  style="cursor: pointer;"  routerLink="/post/{{post._id}}">
+                    <img src="{{picUrl}}{{post._id}}" class="postImg" />
+                </div>
+                
+                <div class="card-footer  bg-info text-white">
+                    <div class="float-left author">
+                        Posted-{{post.createdAt | date}}
+                    </div>
+                    <div class="float-right author">
+                        Author-Yous
+                    </div>
+                </div>
+            </div>
+              
+        </div>
+        <div class="col-md-12 text-center" *ngIf="count == 0">
+            <div class="text-center">
+                <img class="card-img-top" style="width:60%" src="./../../../../assets/img/nopost.png" alt="">
+            </div>
+        </div>
+       
+    </div>
+</div>
