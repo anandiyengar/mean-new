@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 4040;
 const mongoose = require("mongoose");
 
 // IMPORT ALL THE REQUIRED LIBRARIES
