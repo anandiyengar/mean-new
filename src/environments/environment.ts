@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  api_url:"api/"
+  api_url:"https://radiant-wave-22019.herokuapp.com/backend/api/"
 };
 
 /*
