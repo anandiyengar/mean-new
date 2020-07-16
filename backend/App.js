@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 const mongoose = require("mongoose");
 
 // IMPORT ALL THE REQUIRED LIBRARIES
@@ -13,7 +13,7 @@ const postRoute = require("./Routers/posts");
 const hobbyRoute = require("./Routers/hobby");
 
 // CONNECT MONGOOSE 
-mongoose.connect("mongodb://anandiyengar1993:Anand@1993@de243578.mlab.com:47178/blog-app",{
+mongoose.connect("mongodb+srv://anandiyengar1993:Anand@1993@cluster0.iyflr.mongodb.net/blog-app",{
     useCreateIndex:true,
     useUnifiedTopology:true,
     useNewUrlParser:true
